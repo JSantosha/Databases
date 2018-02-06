@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>HW3</name>
+    <visibility>0</visibility>
+    <open>1</open>
+    <Placemark>
+      <name>Home</name>
+      <Point>
+        <coordinates>-118.28028610000001,34.028357,0</coordinates>
+      </Point>
+    </Placemark>
+   <Placemark>
+      <name>Galen</name>
+      <Point>
+        <coordinates>-118.27975,34.02127,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lyon Center</name>
+      <Point>
+        <coordinates>-118.28831,34.02439,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SGM</name>
+      <Point>
+        <coordinates>-118.2890857,34.0210824,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tommy Trojan</name>
+      <Point>
+        <coordinates>-118.28599229999999,34.0206485,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Doheny Memorial Library</name>
+      <Point>
+        <coordinates>-118.28395,34.02023,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Leavey Library</name>
+      <Point>
+        <coordinates>-118.28297339999999,34.021642299999996,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>USC Schaeffer Center</name>
+      <Point>
+        <coordinates>-118.28355069999999,34.018926799999996,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ogasawara Plaza</name>
+      <Point>
+        <coordinates>-118.2908054,34.0191909,0</coordinates>
+      </Point>
+    </Placemark>
+	<Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Absolute Extruded</name>
+      <description>Transparent green wall with yellow outlines</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates> 
+	-118.28028610000001,34.028357,200
+	-118.27975,34.02127,200
+	-118.28355069999999,34.018926799999996,200
+	-118.2908054,34.0191909,200
+	-118.28831,34.02439,200
+	-118.28028610000001,34.028357,200
+        </coordinates>
+      </LineString>
+ </Placemark>
+  </Document>
+</kml>

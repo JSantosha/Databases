@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<style>
+
+</style>
+</head>
+<body>
+
+<script>
+var sgm={lat:34.0210824,lng:-118.2890857};
+var R=5,r=1,a=4;
+var x0=R+r-a,y0=0;
+var cos=Math.cos,sin=Math.sin,pi=Math.PI,nRev=10;
+for(var t=0.0;t<(pi*nRev);t+=0.01){
+var x=(R+r)*cos((r/R)*t) - a*cos((1+r/R)*t);
+var y=(R+r)*sin((r/R)*t) - a*sin((1+r/R)*t);
+document.writeln('&ltPlacemark&gt&ltname&gt&lt/name&gt&ltPoint&gt&ltcoordinates&gt'+(sgm["lng"]+y/1000)+','+(sgm["lat"]+x/1000)+',0'+'&lt/coordinates&gt&lt/Point&gt&lt/Placemark&gt'+'<br>');
+//document.write('<Placemark><name>Home</name><Point><coordinates>'+sgm["lng"]+10*y+','+sgm["lat"]+10*x+',0</coordinates></Point></Placemark>');
+	}
+</script>
+</body>
+
+</html>
