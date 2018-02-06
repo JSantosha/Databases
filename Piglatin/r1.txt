@@ -1,0 +1,6 @@
+A = load './para1.txt' as (line : chararray);
+B = foreach A generate TOKENIZE(line) as tokens;
+C = foreach B generate flatten(tokens) as words;
+X = foreach C generate flatten(STRSPLIT(words, '(?<=.)(?=.)')) as letters;
+Y = foreach X generate TOBAG(letters.letters)) as let;
+Dump Y;

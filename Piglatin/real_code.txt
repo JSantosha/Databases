@@ -1,0 +1,20 @@
+M = foreach B generate REGEX_EXTRACT_ALL(word,'([a-z])') as letter;
+C = group M by letter;
+D = foreach C generate group,  COUNT(M);
+
+
+
+
+A = LOAD './in/para[1-6].txt' as (content:chararray);
+B = foreach A generate FLATTEN(TOKENIZE(LOWER(REPLACE(content,'',' ')))) as word;
+N = filter B by word matches '[a-z]';
+L = group N by word;
+X = foreach L generate group,  COUNT(N);
+
+Dump X;
+
+
+
+
+
+

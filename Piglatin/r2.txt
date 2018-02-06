@@ -1,0 +1,7 @@
+describe A; describe B; describe C; describe X; describe Y;
+A: {,content: chararray}
+B: {letters: bytearray}
+C: {letters: (x: int,y: int,letters: bytearray)}
+D: {x: int,y: int,letter: bytearray}
+E: {group: (x: int,y: int,letter: bytearray),D: {x: int,y: int,letter: bytearray}}
+F: {x: int,y: int,letter: bytearray,count: long}
