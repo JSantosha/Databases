@@ -1,0 +1,14 @@
+create table mail 
+(name char(50) not null, address char(5), id integer not null, samefam integer);
+
+insert into mail values ('Alice', 'A', 10, NULL);
+insert into mail values ('Bob', 'B', 15, NULL);
+insert into mail values ('Carmen', 'C', 22, NULL);
+insert into mail values ('Diego', 'A', 9, 10);
+insert into mail values ('Ella', 'B', 3, 15);
+insert into mail values ('Farkhad', 'D', 11, NULL);
+
+
+delete from mail m where m.samefam is NULL and exists(select * from mail m1 where m.id=m1.samefam);
+
+select * from mail;

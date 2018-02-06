@@ -1,0 +1,11 @@
+CREATE TABLE HotelStays
+(roomNum INTEGER NOT NULL unique,
+arrDate DATE NOT NULL,
+depDate DATE NOT NULL,
+guestName CHAR(30) NOT NULL,
+PRIMARY KEY (roomNum, arrDate),
+check (arrDate<depDate));
+
+INSERT INTO HotelStays(roomNum, arrDate, depDate, guestName) VALUES 
+(123, to_date('20160202', 'YYYYMMDD'), to_date('20160206','YYYYMMDD'), 'A');
+

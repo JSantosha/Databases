@@ -1,0 +1,25 @@
+create table chefs (chef char(10) NOT NULL ,dish char(100) Not null);
+
+Insert into chefs(chef, dish) values ('A','Mint chocolate brownie');
+Insert into chefs(chef, dish) values ('B','Upside down pineapple cake');
+Insert into chefs(chef, dish) values ('B','Creme brulee');
+Insert into chefs(chef, dish) values ('B','Mint chocolate brownie');
+Insert into chefs(chef, dish) values ('C','Upside down pineapple cake');
+Insert into chefs(chef, dish) values ('C','Creme brulee');
+Insert into chefs(chef, dish) values ('D','Apple pie');
+Insert into chefs(chef, dish) values ('D','Upside down pineapple cake');
+Insert into chefs(chef, dish) values ('D','Creme brulee');
+Insert into chefs(chef, dish) values ('E','Apple pie');
+Insert into chefs(chef, dish) values ('E','Upside down pineapple cake');
+Insert into chefs(chef, dish) values ('E','Creme brulee');
+Insert into chefs(chef, dish) values ('E','Bananas Foster');
+
+
+
+select chef from chefs where dish='Apple pie'
+intersect 
+select chef from chefs where dish='Upside down pineapple cake'
+intersect
+select chef from chefs where dish='Creme brulee';
+
+

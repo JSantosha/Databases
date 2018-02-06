@@ -1,0 +1,22 @@
+create table project
+(p_id char(15) not null, step integer not null, status char(2) not null);
+
+
+insert into project(p_id, step, status)
+values
+('P100',0,'C'),
+('P100',1,'W'),
+('P100',2,'W'),
+('P201',0,'C'),
+('P201',1,'C'),
+('P333',0,'W'),
+('P333',1,'W'),
+('P333',2,'W'),
+('P333',3,'W');
+
+
+select p_id from project where step=0 and status ='C'
+intersect
+select p_id from project where step=1 and status='W'
+intersect 
+select p_id from project where step=2 and status='W';
